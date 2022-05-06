@@ -40,7 +40,7 @@
 # Patches very welcome.
 
 #Mirror for portage snapshot and stage3 tarball
-MIRROR=http://lug.mtu.edu/gentoo/
+MIRROR=https://mirrors.lug.mtu.edu/gentoo/
 
 #stage 3 relative path
 STAGE_PATH=releases/amd64/autobuilds/current-stage3-amd64/
@@ -55,16 +55,16 @@ STAGE_BALL=stage3-amd64-20180715T214502Z.tar.xz
 PORTAGE_SNAPSHOT=portage-latest.tar.xz
 
 #Root filesystem device
-ROOTDEV=/dev/sda4
+ROOTDEV=/dev/nvme0n1p3
 
-FS_BOOT_UUID=3c2398d1-c84a-425d-b35b-63841188ff01
-FS_SWAP_UUID=cf048d96-2455-4dbd-bda1-5a0931897a6f
+FS_BOOT_UUID=E304-C311
+FS_SWAP_UUID=c6462758-57fd-4c85-9fab-40cfcb312c97
 #assigned later
-FS_ROOT_UUID=""
+FS_ROOT_UUID="3c5b830e-650d-4004-bd6c-9b30b70388fb"
 
-ETC_CONFD_HOSTNAME="saffron"
+ETC_CONFD_HOSTNAME="abs"
 
-ETC_TIMEZONE="America/Detroit"
+ETC_TIMEZONE="Europe/Moscow"
 
 KERNEL_SOURCES="sys-kernel/gentoo-sources"
 
@@ -77,7 +77,7 @@ EOF
 
 #make.conf
 
-SYS_CPU_TGT="3"
+SYS_CPU_TGT="5"
 
 MAKE_CONF=$(cat <<EOF
 CFLAGS="-O2 -pipe -march=native -ggdb"
@@ -86,7 +86,7 @@ CXXFLAGS="\${CFLAGS}"
 MAKEOPTS="--jobs=${SYS_CPU_TGT}"
 EMERGE_DEFAULT_OPTS="--jobs=${SYS_CPU_TGT} --verbose --tree --keep-going --with-bdeps=y"
 FEATURES="splitdebug"
-LINGUAS="en"
+LINGUAS="ru"
 
 USE="mmx sse sse2 sse3 ssse3 posix nptl smp avahi curl ipv6 acpi dbus hddtemp libnotify lm_sensors pam readline syslog udev unicode usb -gnome -oss -static"
 
