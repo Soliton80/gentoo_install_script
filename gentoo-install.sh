@@ -52,10 +52,10 @@ PORTAGE_PATH=snapshots/
 STAGE_BALL=stage3-amd64-20180715T214502Z.tar.xz
 
 #Portage snapshot tarball
-PORTAGE_SNAPSHOT=portage-latest.tar.xz
+PORTAGE_SNAPSHOT=stage3-amd64-20180715T214502Z.tar.xz
 
 #Root filesystem device
-ROOTDEV=/dev/nvme0n1p3
+ROOTDEV=/dev/nvme0n1p3 
 
 FS_BOOT_UUID=E304-C311
 FS_SWAP_UUID=c6462758-57fd-4c85-9fab-40cfcb312c97
